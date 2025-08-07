@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <style>
+        
+        body{
+            background-color: black;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: black;
+        }
+        .logo{
+            padding-top: 15px;
+            color: #e50914;
+            font-weight: bold;
+            font-size: 40px;
+            position: fixed;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 20px;
+        }
+        .Buttons{
+            display: flex;
+            gap: 20px;
+        }
+        .SignIn{
+            background-color:#e50914;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: fixed;
+            left: 1400px;
+            
+        }
+        .SignIn:hover{
+            background-color:#f0353e;
+        }
+        .lang{
+            font-size: 1em;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: fixed;
+            left: 1280px;
+        }
+        .lang:hover{
+            background-color: #bab6b6;
+        }
+        .hero{
+            text-align: center;
+            padding: 50px;
+            background-image: url(netflixx.png);
+            color: white;
+            margin:  30px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hero h1{
+            font-size: 3.5em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            margin-bottom: 20px;
+        }
+        .hero h3{
+            font-size: 1.5em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .hero p{
+            font-size: 1.0em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .mail-input{
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 1em;
+            border: 3px solid white;
+            width: 350px;
+        }
+        .start-button{
+            background-color:#e50914;
+            color: white;
+            padding: 10px 15px;
+            border: 1px #e50914;
+            cursor: pointer;
+            width: 170px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+        .start-button:hover{
+            background-color: #f13942;
+
+        }
+       
+        .categories{
+            padding: 50px;
+            margin: 20px 0;
+        }
+        .category{
+            color:white;
+            padding: 0px 20px;
+            margin-bottom: 10px;
+            background-color: #242525;
+            border: 1px solid #242525;
+            border-radius: 45px;
+        }
+        .faq{
+            padding: 0 50px;
+        }
+        .faq h2{
+            margin-top: 0px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .faq-btn{
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            width: 1400px;
+            height: 60px;
+            background-color: #242525;
+            border: 1px solid #242525;
+            border-radius: 10px;
+            color: white;
+            text-align: left;
+            font-size: 15px;
+            font-weight: bold;
+            transition: background-color;
+            cursor: pointer;
+        }
+        .faq-btn:hover{
+            background-color: #343434;
+        } 
+        .collapse{
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: 1px solid #242525;
+            border-radius: 10px;
+            background-color: #242525;
+            font-weight: bold;
+            width: 1400px;
+        }
+        .footer{
+            padding: 50px; 
+        }
+        .footer h4{
+            color: white;
+        }
+        .foot-elm{
+            display: flex;
+            gap: 100px;
+            
+        }
+        .link a{
+            display: flex;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">NETFLIX</h1>
+        <div class="Buttons"><select class="lang" name="" id="">
+            <option value="Eng">English</option>
+            <option value="hind">Hindi</option>
+            <option value="Beng">Bengali</option>
+            <option value="Tamil">Tamil</option>
+        </select>
+        <button class="SignIn">Sign in</button></div>
+    </header>
+
+    <main class="body">
+        <div class="hero">
+        <h1>Unlimited movies, TV <br> shows and more.</h1>
+        <h3>Watch anywhere. Cancel anytime</h3>
+        <p>Ready to watch? Enter your email to create or restart membership</p>
+        <input class="mail-input" type="email" placeholder="Email adress" id="mail">
+        <button class="start-button" id="mail">Get Started</button>
+       </div>
+         <div class="categories">
+            
+            <div class="category">
+                <H2>Trending Now </H2>
+            </div>
+            <div class="category">
+                <h2>New Releases</h2>
+            </div>
+            <div class="category"> <h2>Top Rated</h2></div>
+         </div>
+         <div class="faq">
+            <h2>Frequently Asked Questions</h2>            
+            <div>
+                <button class="faq-btn" data-bs-toggle="collapse" data-bs-target="#collapse-eg1">What is Netflix?</button>
+                <div id="collapse-eg1" class="collapse">
+                    Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+                    You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+                </div>
+            </div>
+            <div>
+                <button class="faq-btn" data-bs-toggle="collapse" data-bs-target="#collapse-eg2">How much does Netflix cost?</button>
+                <div id="collapse-eg2" class="collapse">
+                    Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.
+                </div>
+            </div>
+            <div>
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#collapse-eg3" class="faq-btn">Where can I watch?</button>
+                <div id="collapse-eg3" class="collapse">
+                    Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                    You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                </div>
+            </div>
+            <div>
+                <button class="faq-btn" data-bs-toggle="collapse" data-bs-target="#collapse-eg4">How do I cancel?</button>
+                <div id="collapse-eg4" class="collapse">
+                    Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                </div>
+            </div>
+            <div>
+                <button class="faq-btn" data-bs-toggle="collapse" data-bs-target="#collapse-eg5">Is Netflix good for kids</button>
+                <div id="collapse-eg5" class="collapse">
+                    The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+                     <br><br>
+                    Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see
+                </div>
+            </div>          
+         </div>
+    </main>
+     <footer class="footer">
+        <h4>Questions? Call 000-800-919-1743</h4>
+        <div class="foot-elm">
+            <div class="link">
+                <a href="">Jobs</a>
+                <a href="">Privacy</a>
+                <a href="">Career</a>
+                <a href="">Account</a>
+            </div>
+            <div class="link">
+                <a href="">Cost</a>
+                <a href="">Cookies</a>
+                <a href="">Help Centre</a>
+                <a href="">Privacy</a>
+            </div>
+        </div>
+     </footer>
+</body>
+</html>
