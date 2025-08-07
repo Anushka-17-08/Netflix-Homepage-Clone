@@ -1,7 +1,7 @@
 # Netflix-Homepage-Clone
-Create a User interface for Netflix Home page.
+Created a User interface for Netflix Home page.
 
-Design 3 sections on the home page:
+Designed 3 sections on the home page:
 <br>
 a.Header - containing website logo, Sign in button and language selectiondropdown.<br>
 b.Body - containing Home page titles, email input box to get started with, multiplesections for categories of video streaming, FAQ section etc.<br>
